@@ -12,20 +12,16 @@
         'l10n_ve',
     ],
     'data': [
-        # 1. Seguridad siempre primero
         'security/ir.model.access.csv',
-        
-        # 2. Datos Maestros (En este orden exacto para evitar errores de referencia)
         'data/res_country_state_data.xml',
-        'data/account.account.csv',        # Primero las cuentas
-        'data/account_tax_group_data.xml', # Luego los grupos de impuestos
-        'data/account_tax_data.xml',       # AHORA SÍ: Los impuestos vinculados a cuentas y grupos
-        'data/account_chart_template.xml', # Al final el template que une todo
-        
-        # 3. Interfaz de Usuario (Vistas)
+        'data/account.account.csv',
+        'data/account_tax_group_data.xml',
+        'data/account_tax_data.xml',
+        'data/account_chart_template.xml',
+        'data/ir_cron_data.xml',  # <--- Agrega esta línea
         'views/res_company_views.xml',
         'views/res_config_settings_views.xml',
-        'views/account_move.xml',          # No olvides incluir esta para el Número de Control
+        'views/account_move.xml',
     ],
     'installable': True,
     'application': True,
